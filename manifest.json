@@ -1,0 +1,71 @@
+{
+    "manifest_version": 3,
+    "name": "STEtrade_v1.56",
+    "description": "Бот  для работы на торговой площадке Steam",
+    "version": "1.56",
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "js": [
+                "scr/jquery.js",
+                "scr/script_listings.js"
+            ],
+            "css": [
+                "scr/site.css"
+            ],
+            "matches": [
+                "https://steamcommunity.com/market/listings/*"
+            ],
+            "run_at": "document_end"
+        },
+        {
+            "all_frames": true,
+            "js": [
+                "scr/jquery.js",
+                "scr/script_login.js"
+            ],
+            "matches": [
+                "https://steamcommunity.com/login/home/?goto="
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "action": {
+        "default_title": "STEtrade_v1.56",
+        "default_icon": "ico/PRO.png",
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "256": "ico/PRO.png"
+    },
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    },
+    "permissions": [
+        "notifications",
+        "cookies",
+        "tabs",
+        "browsingData",
+        "storage",
+        "proxy",
+        "declarativeNetRequest",
+        "declarativeNetRequestWithHostAccess",
+        "declarativeNetRequestFeedback"
+    ],
+    "host_permissions": [
+        "https://*.steamcommunity.com/*",
+        "https://api.csgofloat.com/*",
+        "http://*.localhost/*",
+        "http://*.stetrade.ru/*"       ,
+        "https://*.kino-perchik.ru/*"
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}

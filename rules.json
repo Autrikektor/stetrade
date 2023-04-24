@@ -1,0 +1,32 @@
+[
+    {
+        "id": 17,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "Referer",
+                    "operation": "set",
+                    "value": "https://steamcommunity.com/market/"
+                },
+                    {
+                    "header": "Origin",
+                    "operation": "set",
+                    "value": "https://steamcommunity.com/"
+                }
+            ]
+        },
+        "condition": {
+            "urlFilter": "https://steamcommunity.com/market",
+            "resourceTypes": [
+                "main_frame",
+                "script",
+                "other",
+                "sub_frame",
+                "stylesheet",
+                "xmlhttprequest"
+            ]
+        }
+    }
+]
