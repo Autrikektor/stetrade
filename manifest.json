@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "STEtrade_v1.56",
+    "name": "STEtrade_v1.57",
     "description": "Бот  для работы на торговой площадке Steam",
-    "version": "1.56",
+    "version": "1.57",
     "content_scripts": [
         {
             "all_frames": true,
@@ -31,7 +31,7 @@
         }
     ],
     "action": {
-        "default_title": "STEtrade_v1.56",
+        "default_title": "STEtrade_v1.57",
         "default_icon": "ico/PRO.png",
         "default_popup": "popup.html"
     },
@@ -61,9 +61,10 @@
     "host_permissions": [
         "https://*.steamcommunity.com/*",
         "https://api.csgofloat.com/*",
+        "https://api.csgotrader.app/*",
+        "https://*.steaminventoryhelper.com/*",
         "http://*.localhost/*",
-        "http://*.stetrade.ru/*"       ,
-        "https://*.kino-perchik.ru/*"
+        "http://*.stetrade.ru/*"      
     ],
     "content_security_policy": {
         "extension_pages": "script-src 'self'; object-src 'self'"

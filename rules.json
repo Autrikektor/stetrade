@@ -1,6 +1,6 @@
 [
     {
-        "id": 17,
+        "id": 1,
         "priority": 1,
         "action": {
             "type": "modifyHeaders",
@@ -19,6 +19,36 @@
         },
         "condition": {
             "urlFilter": "https://steamcommunity.com/market",
+            "resourceTypes": [
+                "main_frame",
+                "script",
+                "other",
+                "sub_frame",
+                "stylesheet",
+                "xmlhttprequest"
+            ]
+        }
+    },
+        {
+        "id": 2,
+        "priority": 1,
+        "action": {
+            "type": "modifyHeaders",
+            "requestHeaders": [
+                {
+                    "header": "Referer",
+                    "operation": "set",
+                    "value": "https://csgofloat.com/"
+                },
+                    {
+                    "header": "Origin",
+                    "operation": "set",
+                    "value": "https://csgofloat.com/"
+                }
+            ]
+        },
+        "condition": {
+            "urlFilter": "https://api.csgofloat.com/",
             "resourceTypes": [
                 "main_frame",
                 "script",
